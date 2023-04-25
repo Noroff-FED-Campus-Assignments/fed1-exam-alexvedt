@@ -1,0 +1,16 @@
+/*!
+ * UI
+ * Place all your regular CSS here. If you don't know where to write your css, write it here.
+ * @tutorial https://web.dev/learn/css/flexbox/
+ * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-3/media-queries
+ */
+
+.c-card {
+  border-radius: --radius-1;
+}
+
+.hero-image {
+  max-width: 480px;
+  margin: auto;
+  aspect-ratio: var(--ratio-landscape);
+}
