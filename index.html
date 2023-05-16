@@ -7,43 +7,175 @@
     <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
     <meta
       name="keywords"
-      content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
+      content="HTML, CSS, JavaScript, CodeBuzz, Blog, Tech, Web Development, Web Design, Frontend, Backend, Fullstack, Software Engineer, Software Developer, Software, Engineer, Developer, Programming, Code, Coding, Learn, Learning, Tutorial, Tutorials,"
     />
-    <meta name="author" content="_YOUR_NAME_" />
+    <meta name="author" content="AlexVedt" />
     <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>_REPLACE_SITE_NAME</title>
+    <script defer src="/js/header.js"></script>
+    <script defer src="/js/app.js"></script>
+    <script defer src="/js/footer.js"></script>
+    <title>CodeBuzz</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
   <body class="animate__animated animate__fadeIn">
+
+      <!--header from here -->
+
+
     <header class="l-header">
-      <h1>Home</h1>
+<div class="container">
+  <div class="subcontainer">
+    <nav class="navbar">
+      <a href="/index.html" class="nav-branding" ><img class="logo" src="/assets/images-exam/white-trans-logo.png" alt="Logo-CodeBuzz"></a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </div>
+</div>
     </header>
+    
+
+    <!--body from here -->
+
 
     <main class="l-main">
+      <div class="main-container">
+        <div class="headerimage">
+          <img class="hero-image" src="/assets/images-exam/header-with-logos.jpg" alt="header image with logo and slogan">
+        </div>
+
       <section role="search"></section>
 
       <article role="doc-introduction">
-        <h2>List</h2>
+        <div class="blog-heading">
+          <p>My Recents Posts</p>
+        </div>
 
-        <img
-          src="/placeholder.jpg"
-          loading="lazy"
-          alt="…"
-          class="u-img hero-image"
-          width="1024"
-          height="1024"
-        />
-
-        <p>_REPLACE_INTRODUCTION_</p>
       </article>
+      
 
-      <section role="list">
-        <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div>
+      <section role="list" id="results" class="blog">
+        <!-- <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div> -->
+        <div class="loading-container">
+          <div class="loading"></div>
+          <div class="loading"></div>
+          <div class="loading"></div>
+        </div>
+
+
+
+
+        
+
+
+
+
+
+      <div class="blog-container">
+      <!--From here and to line 121 - this is to make static noise filter onhover this code is inspired by @hyperplexed-->
+        <svg style="display: none;">
+          <defs>
+            <filter id="noises">
+              <feTurbulence
+                baseFrequency="0.7,0.8"
+                seed="0"
+                type="fractalNoise"
+                result="static"
+              >
+                <animate
+                  attributeName="seed"
+                  values="0;100"
+                  dur="800ms"
+                  repeatCount="1" 
+                  begin="mouseover"                           
+                />
+              </feTurbulence>
+              <feDisplacementMap in="SourceGraphic" in2="static">
+                <animate
+                  attributeName="scale"
+                  values="0;40;0"
+                  dur="700ms"
+                  repeatCount="1" 
+                  begin="mouseover"                           
+                />
+              </feDisplacementMap>
+            </filter>  
+          </defs>
+        </svg>
+        
+
+        <!-- <div class="blog-box animate__animated animate__slideInLeft">
+          <div class="blog-img card" >
+            <img src="/assets/images-exam/my-life.jpg" alt="blog image">
+          </div>
+            <div class="blog-text">
+            <span>Published date / Theme</span>
+            <a href="#" class="blog-title">TITLE OF BLOG</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, sequi. Rerum fugit velit perspiciatis eos corporis at quis similique blanditiis.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div> -->
+
+
+
+      </div>
+
+
+
+
       </section>
     </main>
+  </div>
+
+  <!--footer from here -->
 
     <footer class="l-footer">
-      <small>Created with ❤️ by _REPLACE_</small>
+      <div class="footer-container">
+        <div id="text"><div id="text">
+          <div class="line">
+            <p class="word">I'm</p>
+            <p class="word">AlexVedt</p>
+          </div>
+        
+          <div class="line">
+            <p class="word">Find Me</p>
+            <p class="word">@</p>
+          </div>
+        
+          <div class="line">
+            <p class="word">Github</p>
+          </div>
+          
+          <div class="line">
+            <a 
+               id="channel-link" 
+               href="https://github.com/alexvedt" 
+               target="_blank" 
+               class="word fancy"
+            >
+              @AlexVedt
+            </a>
+          </div>
+        </div>
+      </div>
+      <small>Created with ❤️ by AlexVedt</small>
     </footer>
   </body>
 </html>
