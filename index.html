@@ -61,11 +61,32 @@
           <img class="hero-image" src="/assets/images-exam/header-with-logos.jpg" alt="header image with logo and slogan">
         </div>
 
-      <section role="search"></section>
+
 
       <article role="doc-introduction">
         <div class="blog-heading">
-          <p>My Recents Posts</p>
+          <h1 class="header-text">My Recents Posts</h1>
+          <section role="search">
+            <div class="search-container">
+              <!-- <label for="filter">Filter by Date</label> -->
+              <select name="" id="filter">
+                <option value="">All</option>
+                <option value="oldest">Oldest to Newest</option>
+                <option value="newest">Newest to Oldest</option>
+              </select>
+              <div>
+                <!-- <label for="search">Search:</label> -->
+                <input type="text" id="search" placeholder="how to center a div?">
+              </div>
+              <div>
+                <!-- <label for="sort">Sort A-Z:</label> -->
+                <select id="sort">
+                  <option value="">No Sorting</option>
+                  <option value="asc">A-Z</option>
+                </select>
+              </div>
+            </div>
+          </section>
         </div>
 
       </article>
@@ -92,7 +113,7 @@
       <!--From here and to line 121 - this is to make static noise filter onhover this code is inspired by @hyperplexed-->
         <svg style="display: none;">
           <defs>
-            <filter id="noises">
+            <filter id="noise">
               <feTurbulence
                 baseFrequency="0.7,0.8"
                 seed="0"
@@ -104,7 +125,7 @@
                   values="0;100"
                   dur="800ms"
                   repeatCount="1" 
-                  begin="mouseover"                           
+                  begin="card.mouseenter"                           
                 />
               </feTurbulence>
               <feDisplacementMap in="SourceGraphic" in2="static">
@@ -113,7 +134,7 @@
                   values="0;40;0"
                   dur="700ms"
                   repeatCount="1" 
-                  begin="mouseover"                           
+                  begin="card.mouseenter"                           
                 />
               </feDisplacementMap>
             </filter>  
@@ -141,41 +162,44 @@
 
 
       </section>
+      <div id="showBtn"></div>
+      <footer class="l-footer">
+        <div class="footer-container">
+          <div id="text"><div id="text">
+            <div class="line">
+              <p class="word">I'm</p>
+              <p class="word">AlexVedt</p>
+            </div>
+          
+            <div class="line">
+              <p class="word">Find Me</p>
+              <p class="word">@</p>
+            </div>
+          
+            <div class="line">
+              <p class="word">Github</p>
+            </div>
+            
+            <div class="line">
+              <a 
+                 id="channel-link" 
+                 href="https://github.com/alexvedt" 
+                 target="_blank" 
+                 class="word fancy"
+              >
+                @AlexVedt
+              </a>
+            </div>
+          </div>
+        </div>
+        <small>Created with ❤️ by AlexVedt</small>
+      </div>
+    </footer>
+    </div>
     </main>
-  </div>
 
   <!--footer from here -->
 
-    <footer class="l-footer">
-      <div class="footer-container">
-        <div id="text"><div id="text">
-          <div class="line">
-            <p class="word">I'm</p>
-            <p class="word">AlexVedt</p>
-          </div>
-        
-          <div class="line">
-            <p class="word">Find Me</p>
-            <p class="word">@</p>
-          </div>
-        
-          <div class="line">
-            <p class="word">Github</p>
-          </div>
-          
-          <div class="line">
-            <a 
-               id="channel-link" 
-               href="https://github.com/alexvedt" 
-               target="_blank" 
-               class="word fancy"
-            >
-              @AlexVedt
-            </a>
-          </div>
-        </div>
-      </div>
-      <small>Created with ❤️ by AlexVedt</small>
-    </footer>
+
   </body>
 </html>

@@ -4,7 +4,11 @@ const env = {
   API_KEY: "keyNDk1zmGMyyUPFh",
 };
 
+const showBtn = document.querySelector("#showBtn");
 const results = document.querySelector("#results");
+const filterSelect = document.querySelector("#filter");
+const searchInput = document.querySelector("#search");
+const sortSelect = document.querySelector("#sort");
 
 const BASE_ID = env.BASE_ID;
 const TABLE_NAME = env.TABLE_NAME;
@@ -16,32 +20,82 @@ const headers = {
   "Content-Type": "application/json",
 };
 
+let blogPosts = [];
+let filteredPosts = [];
+let isShowingAll = false;
+
+const renderBlogPosts = (posts) => {
+  results.innerHTML = "";
+  posts.forEach((blogpost) => {
+    const imageUrl = blogpost.fields["Hero image"][0].thumbnails.large.url;
+    const title = blogpost.fields.Title;
+    const text = blogpost.fields.Text;
+    const createdDate = new Date(blogpost.createdTime).toLocaleDateString();
+
+    results.innerHTML += `
+      <div class="blog-box animate__animated animate__slideInLeft">
+        <div id="card" class="blog-img card">
+          <img src="${imageUrl}" alt="blog image">
+        </div>
+        <div class="blog-text">
+          <span>${createdDate} / Theme</span>
+          <a href="#" class="blog-title">${title}</a>
+          <p>${text}</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    `;
+  });
+
+  if (!isShowingAll && blogPosts.length > 10) {
+    showBtn.innerHTML += `
+      <button class="show-all-btn" id="showAll">Show All Posts</button>
+    `;
+  }
+};
+
+const filterBlogPosts = (filterValue) => {
+  let posts = [...filteredPosts];
+
+  if (filterValue === "oldest") {
+    posts.sort((a, b) => new Date(a.createdTime) - new Date(b.createdTime));
+  } else if (filterValue === "newest") {
+    posts.sort((a, b) => new Date(b.createdTime) - new Date(a.createdTime));
+  }
+
+  renderBlogPosts(posts);
+};
+
+const searchBlogPosts = (keyword) => {
+  const filtered = blogPosts.filter((blogpost) => {
+    const title = blogpost.fields.Title.toLowerCase();
+    const text = blogpost.fields.Text.toLowerCase();
+    return title.includes(keyword) || text.includes(keyword);
+  });
+
+  renderBlogPosts(filtered);
+};
+
+const sortBlogPosts = (sortValue) => {
+  let posts = [...filteredPosts];
+
+  if (sortValue === "asc") {
+    posts.sort((a, b) => a.fields.Title.localeCompare(b.fields.Title));
+  } else if (sortValue === "date") {
+    posts.sort((a, b) => new Date(a.createdTime) - new Date(b.createdTime));
+  }
+
+  renderBlogPosts(posts);
+};
+
 const getBlogPosts = async () => {
   try {
     const response = await fetch(tableUrl, { headers: headers });
     if (response.ok) {
       const data = await response.json();
-      results.innerHTML = "";
-      data.records.forEach((blogpost) => {
-        const imageUrl = blogpost.fields["Hero image"][0].thumbnails.large.url;
-        const title = blogpost.fields.Title;
-        const text = blogpost.fields.Text;
-        const createdDate = new Date(blogpost.createdTime).toLocaleDateString();
-
-        results.innerHTML += `
-          <div class="blog-box animate__animated animate__bounceInUp">
-            <div class="blog-img card">
-              <img src="${imageUrl}" alt="blog image">
-            </div>
-            <div class="blog-text">
-            <span>${createdDate} / Theme</span>
-            <a href="#" class="blog-title">${title}</a>
-              <p>${text}</p>
-              <a href="#">Read More</a>
-            </div>
-          </div>
-        `;
-      });
+      blogPosts = data.records;
+      filteredPosts = [...blogPosts];
+      renderBlogPosts(blogPosts);
     } else {
       console.log("Failed to fetch blog posts");
     }
@@ -51,57 +105,26 @@ const getBlogPosts = async () => {
 };
 
 getBlogPosts();
+searchBlogPosts(""); // Show all posts initially
 
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L66
-============================================
-*/
+filterSelect.addEventListener("change", (event) => {
+  const filterValue = event.target.value;
+  filterBlogPosts(filterValue);
+});
 
-// TODO: Get DOM elements from the DOM
+searchInput.addEventListener("keyup", () => {
+  const keyword = searchInput.value.toLowerCase();
+  searchBlogPosts(keyword);
+});
 
-/*
-============================================
-DOM manipulation
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L89
-============================================
-*/
+sortSelect.addEventListener("change", (event) => {
+  const sortValue = event.target.value;
+  sortBlogPosts(sortValue);
+});
 
-// TODO: Fetch and Render the list to the DOM
-
-// TODO: Create event listeners for the filters and the search
-
-/**
- * TODO: Create an event listener to sort the list.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L91
- */
-
-/*
-============================================
-Data fectching
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L104
-============================================
-*/
-
-// TODO: Fetch an array of objects from the API
-
-/*
-============================================
-Helper functions
-https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L154
-============================================
-*/
-
-/**
- * TODO: Create a function to filter the list of item.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L135
- * @param {item} item The object with properties from the fetched JSON data.
- * @param {searchTerm} searchTerm The string used to check if the object title contains it.
- */
-
-/**
- * TODO: Create a function to create a DOM element.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
- * @param {item} item The object with properties from the fetched JSON data.
- */
+results.addEventListener("click", (event) => {
+  if (event.target.id === "showAll") {
+    isShowingAll = true;
+    renderBlogPosts(blogPosts);
+  }
+});

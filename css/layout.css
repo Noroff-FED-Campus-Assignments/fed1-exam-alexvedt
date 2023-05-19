@@ -10,14 +10,14 @@ body {
   width: 100%;
   min-width: 320px;
   place-items: flex-start;
-  min-height: 100vh;
+  /* height: 100vh; */
+  overflow: none;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: minmax(62px, auto) 1fr auto;
+  grid-template-rows: minmax(62px, auto) 1fr;
   grid-template-areas:
     "header"
-    "main"
-    "footer";
+    "main";
 }
 
 .l-header {
@@ -34,12 +34,13 @@ body {
   grid-area: main;
   width: 100%;
   padding: var(--size-fluid-2);
+  overflow-y: auto;
 }
 
 .l-footer {
   display: flex;
   flex-direction: column;
-  grid-area: footer;
+  /* grid-area: footer; */
   width: 100%;
   padding: var(--size-fluid-1);
 }

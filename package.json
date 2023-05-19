@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "dotenv": "^16.0.3",
     "open-props": "^1.5.8"
   }
 }
