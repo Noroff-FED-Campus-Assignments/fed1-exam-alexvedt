@@ -1,5 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/EF97x2Z3)
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10982373&assignment_repo_type=AssignmentRepo)
+
 # FED Exam - Vanilla Front-end Website
 
 This bootstrap template is intended to help you deliever a amazing website which delights your end-users. Feel free to change, remove or start your own project from scratch. Please replace any text which starts with an `_`.
@@ -62,10 +63,10 @@ All of these todo's must be done to pass the asssignment.
 
 ## End-user success criteria (Optional - 100%)
 
-- [ ] End-user can search for a specific item.
-- [ ] End-user can filter the list.
-- [ ] End-user can sort list by;
-  - [ ] Name ascending order
+- [x] End-user can search for a specific item.
+- [x] End-user can filter the list.
+- [x] End-user can sort list by;
+  - [x] Name ascending order
   - [ ] Name descending order
 - [ ] Confirmation modal after custumer submits a successful contact form.
 - [ ] End-user can auto-fill the contact form using the browser auto-fill.
@@ -77,35 +78,35 @@ All of these todo's must be done to pass the asssignment.
   - [ ] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
 - [ ] End-user can view a custom favicon.
-- [ ] CSS uses variables
-- [ ] Code is dry - There are no repeating functions, variables.
-- [ ] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
+- [x] CSS uses variables
+- [x] Code is dry - There are no repeating functions, variables.
+- [x] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
 - [ ] As a stakeholder, I want to view the website analytics.
 - [ ] As a stakeholder, I want to show my customers a disclamer on the website, so that they are aware of the terms and conditions of using the website.
 - [ ] As a customer, I want to ensure that my personal information submitted through the contact form is kept secure and not shared with any third-party entities.
 - [ ] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
 - [ ] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
 
-- [ ] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
+- [x] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
 
-  - [ ] Is user-friendly
-  - [ ] Effective use of the pillars of design
-    - [ ] Typography
-    - [ ] Colour
-    - [ ] Composition
-    - [ ] Art Direction
-    - [ ] Motion
-  - [ ] Adhered to principles of design
-    - [ ] Contrast
-    - [ ] Balance and alignment
-    - [ ] Emphasis
-    - [ ] Proportion
-    - [ ] Hiearchy
-    - [ ] Repetition
-    - [ ] Ryhthem
-    - [ ] Pattern
-    - [ ] Negative space
-    - [ ] Movement
+  - [x] Is user-friendly
+  - [x] Effective use of the pillars of design
+    - [x] Typography
+    - [x] Colour
+    - [x] Composition
+    - [x] Art Direction
+    - [x] Motion
+  - [x] Adhered to principles of design
+    - [x] Contrast
+    - [x] Balance and alignment
+    - [x] Emphasis
+    - [x] Proportion
+    - [x] Hiearchy
+    - [x] Repetition
+    - [x] Ryhthem
+    - [x] Pattern
+    - [x] Negative space
+    - [x] Movement
 
 ## Checklist
 
@@ -157,5 +158,5 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 ## Authors
 
-- _YOURE_NAME_ (@_your_github_username_)
+- _YOURE_NAME_ (@alexvedt
 - Monde Sineke (@S3ak)
