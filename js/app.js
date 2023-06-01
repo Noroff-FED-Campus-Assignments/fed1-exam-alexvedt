@@ -126,7 +126,7 @@ const getBlogPosts = async () => {
 };
 
 getBlogPosts();
-searchBlogPosts(""); // Show all posts initially
+searchBlogPosts("");
 
 filterSelect.addEventListener("change", (event) => {
   const filterValue = event.target.value;
