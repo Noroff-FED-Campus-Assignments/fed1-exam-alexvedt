@@ -1,49 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Hotjar Tracking Code for CodeBuzz -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3517308,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images-exam/golden-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
+    <meta name="description" content="A blog by developers, for developerss" />
     <meta
       name="keywords"
-      content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
+      content="HTML, CSS, JavaScript, CodeBuzz, Blog, Tech, Web Development, Web Design, Frontend, Backend, Fullstack, Software Engineer, Software Developer, Software, Engineer, Developer, Programming, Code, Coding, Learn, Learning, Tutorial, Tutorials, Home Page"
     />
-    <meta name="author" content="_YOUR_NAME_" />
+    <meta name="author" content="AlexVedt" />
     <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>_REPLACE_SITE_NAME</title>
+<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+<link
+
+rel="stylesheet"
+
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+
+integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+
+crossorigin="anonymous"
+
+referrerpolicy="no-referrer"
+
+/>    <script type="module" defer src="/js/header.js"></script>
+    <script type="module" defer src="/js/app.js"></script>
+    <script type="module" defer src="/js/footer.js"></script>
+    <script type="module" defer src="/js/carousel.js"></script>
+    <title>CodeBuzz</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
   <body class="animate__animated animate__fadeIn">
-    <header class="l-header">
-      <h1>Home</h1>
+    <header class="l-header animate__animated animate__bounceInDown">
+<div class="container">
+  <div class="subcontainer">
+    <nav class="navbar">
+      <a href="/index.html" class="nav-branding" ><img class="logo" src="/assets/images-exam/white-trans-logo.png" alt="Logo-CodeBuzz"></a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </div>
+</div>
     </header>
-
     <main class="l-main">
-      <section role="search"></section>
-
+      <div class="main-container">
+        <div class="headerimage">
+          <img class="hero-image animate__animated animate__bounceInDown" src="/assets/images-exam/header-with-logos.jpg" alt="header image with logo and slogan">
+        </div>
       <article role="doc-introduction">
-        <h2>List</h2>
-
-        <img
-          src="/placeholder.jpg"
-          loading="lazy"
-          alt="…"
-          class="u-img hero-image"
-          width="1024"
-          height="1024"
-        />
-
-        <p>_REPLACE_INTRODUCTION_</p>
       </article>
-
-      <section role="list">
-        <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div>
+      <div class="blog-heading">
+        <h2 class="header-text">FEATURED POSTS</h2>
+      </div>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides" id="glide-slides-js">
+            <li class="loading-container">
+              <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+</div>
+</div>
+<div class="blog-heading">
+  <h2 class="header-text">My Recents Posts</h2>
+  </div>
+  <section role="search" class="search container">
+    <div class="search-fields">
+      <label for="filter">Filter by Date:</label>
+      <select name="" id="filter">
+        <option value="">All</option>
+        <option value="oldest">Oldest to Newest</option>
+        <option value="newest">Newest to Oldest</option>
+      </select>
+      <div class="search-fields">
+        <label for="search">Search:</label>
+        <input type="text" id="search" placeholder="how to center a div?">
+      </div>
+      <div class="search-fields">
+        <label for=swiper-wrapper>Sort A-Z:</label>
+        <select id="sort">
+          <option value="">No Sorting</option>
+          <option value="asc">A-Z</option>
+          <option value="desc">Z-A</option>
+        </select>
+      </div>
+    </div>
+  </section>
+      <section role="list" id="results" class="blog">
+        <li class="loading-container">
+          <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </li>
       </section>
-    </main>
-
-    <footer class="l-footer">
-      <small>Created with ❤️ by _REPLACE_</small>
+      <div id="showBtn" class="btn-showall"></div>
+      <footer class="l-footer">
+        <div class="footer-container">
+          <div id="text"><div id="text">
+            <div class="line">
+              <p class="word">I'm</p>
+              <p class="word">AlexVedt</p>
+            </div>
+        
+            <div class="line">
+              <p class="word">Find Me</p>
+              <p class="word">@</p>
+            </div>
+          
+            <div class="line">
+              <p class="word">Github</p>
+            </div>
+            
+            <div class="line">
+              <a 
+                 id="channel-link" 
+                 href="https://github.com/alexvedt" 
+                 target="_blank" 
+                 class="word fancy"
+              >
+                @AlexVedt
+              </a>
+            </div>
+          </div>
+        </div>
+        <small>Terms and conditions apply.
+        </small>
+      </div>
     </footer>
+    </main>
   </body>
 </html>

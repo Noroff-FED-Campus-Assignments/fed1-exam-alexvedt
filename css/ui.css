@@ -1,16 +1,462 @@
-/*!
- * UI
- * Place all your regular CSS here. If you don't know where to write your css, write it here.
- * @tutorial https://web.dev/learn/css/flexbox/
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-3/media-queries
- */
-
-.c-card {
-  border-radius: --radius-1;
+.headerimage{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1400px;
 }
-
+.search-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid wheat;  
+}
+.search-fields{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.search-container :nth-child(1) {
+  margin-right: 1rem;
+}
 .hero-image {
-  max-width: 480px;
-  margin: auto;
-  aspect-ratio: var(--ratio-landscape);
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: auto;
+  max-height: 400px;
+  margin-bottom: 5vh;
 }
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.header-text{
+  font-family: Inconsolata, sans-serif; ;
+  font-weight: 500;
+  background: #42275a;  /*   -webkit-background-clip: text;  is underlined but it has to be there for the text to be visible */
+  background: linear-gradient(100deg, rgba(226,209,133,0.4248074229691877) 3%, rgba(162,162,162,1) 53%, rgba(226,209,133,0.4640231092436975) 100%);
+  -webkit-background-clip: text;  
+-webkit-text-fill-color: transparent;
+
+
+}
+
+.blog-heading{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 85%;
+  flex-wrap: wrap;
+}
+
+
+.blog-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1.2rem 0rem;
+
+}
+
+
+.blog-box {
+  width: 300px;
+  background-color: #1e1e1e;
+  border: 1px solid #d1d1d170;
+  margin: 1.2rem;
+  transition: 0.6s ease-out;
+}
+
+.blog-box:hover{
+  border: 1px solid rgb(41, 59, 41);
+}
+
+
+.blog-text .blog-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(183, 183, 183);
+}
+
+.blog-text p {
+  font-family: Inconsolata;
+  color: #f5f5f5;
+  font-size: 0.9rem;
+  margin: 1rem 0rem;
+}
+
+
+
+
+
+
+
+
+
+.details-box{
+  height: 100%;
+  width: 95%;
+}
+.details-container{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 75vw;
+  border-radius: 10px;
+  transition: 0.6s ease-in;
+  flex-wrap: wrap;
+  }
+
+  .h1-details{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #f5f5f5;
+    margin: 1rem 0rem;
+    font-family: Inconsolata
+  }
+
+
+.blog-img {
+position: relative;
+width: 100%;
+height: auto;
+max-width: 600px;
+}
+
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.blog-text {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.blog-text span {
+  color: rgb(255, 255, 255);
+  font-family: Inconsolata;
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  text-align: end;
+
+}
+.blog-title:hover {
+  text-decoration: underline 1px white;
+  color: white;
+}
+
+.blog-text a {
+  color: #d1d1d1;
+  text-decoration: none;
+  margin: 1rem 0rem;
+}
+.blog-text a:nth-child(4){
+text-decoration: underline 1px solid white;
+
+}
+
+.show-all-btn{
+  background: none;
+  text-decoration: underline 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+.hide-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.de-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogpost{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.thumbnail-image {
+  margin-bottom: 1rem;
+}
+
+.p-details{
+  display: block;
+  font-family: Inconsolata;
+  color: #f5f5f5;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+
+.details-text{
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 100%;
+
+}
+
+
+
+.details-text span {
+  color: rgb(255, 255, 255);
+  font-family: Inconsolata;
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes pulse {
+  from, to {
+    scale: 1;
+  }
+  
+  50% {
+    scale: 1.08;
+  }
+}
+
+#card {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#card > img {  
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+#card:hover > img {
+  animation: pulse 800ms ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+.glide{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.glide__slide {
+  cursor: pointer;
+  box-shadow: 10px rgba(203, 201, 201, 0.1);
+  transition: box-shadow 0.3s ease;
+  background-color: #1e1e1e;
+  border: 1px solid #d1d1d170;
+  transition: transform 0.5s; 
+  margin: 0;
+  padding: 0;
+}
+
+
+.glide__slide:hover {
+  box-shadow: 0 0 10px 0 rgba(209, 209, 209, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+.carousel-link{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.carousel-p {
+  padding: 10px 0;
+  text-align: center;
+}
+
+
+
+
+
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .blog-container{
+    flex-direction: row;
+  }
+  .blog-box {
+    width: 100%;
+    margin: 1.2rem 0rem;
+    flex-direction: row;
+  }
+  .hero-image{
+    display: none;
+  }
+  .card {
+    width: 100%;
+  }
+  .search-fields{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 50%;
+  }
+  .search-container{
+    flex-direction: row;
+  }
+}
+
+
+

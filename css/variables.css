@@ -1,9 +1,9 @@
-/*!
- * Variables
- * @tutorial https://web.dev/at-property/
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-4/css-variables
- */
 
 :root {
-  /* Add your CSS variables here */
+--color-background: #1e1e1e;
+--blue: #00405e;
+--green: #005925;
+
+
+
 }
