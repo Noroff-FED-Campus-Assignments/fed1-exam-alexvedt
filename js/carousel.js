@@ -10,8 +10,6 @@ const fetchBlogPosts = async () => {
       const data = await response.json();
       const blogPosts = data.records;
       renderCarousel(blogPosts);
-    } else {
-      console.log("Failed to fetch blog posts");
     }
   } catch (error) {
     console.log("An error occurred:", error);
@@ -39,7 +37,6 @@ const renderCarousel = (blogPosts) => {
     carouselWrapper.innerHTML += card;
   }
 
-  // Initialize the carousel after rendering the content
   initCarousel();
 };
 
