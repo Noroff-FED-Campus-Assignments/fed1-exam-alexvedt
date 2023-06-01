@@ -17,7 +17,6 @@ This project was bootstrapped with Vite.
 - [Deployment CI](https://app.netlify.com/sites/codebuzz/overview)
 - [API Docs](https://airtable.com/developers/web/api/introduction)
 - [API Endpoint](https://api.airtable.com/v0/app3aw9WCV8zgt57M/tbl2EUogT08k40AN8)
-- [Report] (https://docs.google.com/document/d/1YB4l8uM5cz6ISp0hwG-4P4bzcQErkQE3fP7w7J6PCTY/edit?usp=sharing)
   )
 
 ## Deployment
@@ -29,7 +28,7 @@ YOu can update your deployment pipeling by editing the [vercel.json](https://ver
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+https://docs.google.com/document/d/1YB4l8uM5cz6ISp0hwG-4P4bzcQErkQE3fP7w7J6PCTY/edit?usp=sharing)
 
 ## Getting Started
 
