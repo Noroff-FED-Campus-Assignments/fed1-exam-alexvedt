@@ -1,22 +1,27 @@
-const env = {
+window.env = {
   BASE_ID: "app3aw9WCV8zgt57M",
   TABLE_NAME: "test-exam",
   API_KEY: "keyNDk1zmGMyyUPFh",
 };
 
-const showBtn = document.querySelector("#showBtn");
 const results = document.querySelector("#results");
 const filterSelect = document.querySelector("#filter");
 const searchInput = document.querySelector("#search");
 const sortSelect = document.querySelector("#sort");
 
-const BASE_ID = env.BASE_ID;
-const TABLE_NAME = env.TABLE_NAME;
-const apiKey = env.API_KEY;
+window.BASE_ID = "app3aw9WCV8zgt57M";
+window.TABLE_NAME = "test-exam";
+window.apiKey = "keyNDk1zmGMyyUPFh";
 
-const tableUrl = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
-const headers = {
-  Authorization: `Bearer ${apiKey}`,
+export const TABLE_URL = `https://api.airtable.com/v0/${window.BASE_ID}/${window.TABLE_NAME}`;
+export const headers = {
+  Authorization: `Bearer ${window.apiKey}`,
+  "Content-Type": "application/json",
+};
+
+window.tableUrl = `https://api.airtable.com/v0/${window.BASE_ID}/${window.TABLE_NAME}`;
+window.headers = {
+  Authorization: `Bearer ${window.apiKey}`,
   "Content-Type": "application/json",
 };
 
@@ -26,31 +31,42 @@ let isShowingAll = false;
 
 const renderBlogPosts = (posts) => {
   results.innerHTML = "";
-  posts.forEach((blogpost) => {
+  const maxPostsToShow = 10; // Maximum number of posts to show initially
+
+  const visiblePosts = isShowingAll ? posts : posts.slice(0, maxPostsToShow);
+
+  visiblePosts.forEach((blogpost) => {
     const imageUrl = blogpost.fields["Hero image"][0].thumbnails.large.url;
     const title = blogpost.fields.Title;
     const text = blogpost.fields.Text;
     const createdDate = new Date(blogpost.createdTime).toLocaleDateString();
-
+    const blogId = blogpost.id;
     results.innerHTML += `
-      <div class="blog-box animate__animated animate__slideInLeft">
+      <div class="blog-box animate__animated animate__backInUp">
         <div id="card" class="blog-img card">
           <img src="${imageUrl}" alt="blog image">
         </div>
         <div class="blog-text">
-          <span>${createdDate} / Theme</span>
-          <a href="#" class="blog-title">${title}</a>
-          <p>${text}</p>
-          <a href="#">Read More</a>
+          <span>${createdDate} / By Alex</span>
+          <a href="/details.html?id=${blogId}" class="blog-title">${title}</a>
+          <p class="hide-text">${text}</p>
+          <a href="/details.html?id=${blogId}">Read More</a>
         </div>
       </div>
     `;
   });
 
-  if (!isShowingAll && blogPosts.length > 10) {
-    showBtn.innerHTML += `
-      <button class="show-all-btn" id="showAll">Show All Posts</button>
+  if (posts.length > maxPostsToShow) {
+    results.innerHTML += `
+      <button class="show-all-btn" id="showAll">${
+        isShowingAll ? "Show Less" : "Show More"
+      }</button>
     `;
+    const showAllButton = document.querySelector("#showAll");
+    showAllButton.addEventListener("click", () => {
+      isShowingAll = !isShowingAll;
+      renderBlogPosts(posts);
+    });
   }
 };
 
@@ -81,8 +97,12 @@ const sortBlogPosts = (sortValue) => {
 
   if (sortValue === "asc") {
     posts.sort((a, b) => a.fields.Title.localeCompare(b.fields.Title));
+  } else if (sortValue === "desc") {
+    posts.sort((a, b) => b.fields.Title.localeCompare(a.fields.Title));
   } else if (sortValue === "date") {
     posts.sort((a, b) => new Date(a.createdTime) - new Date(b.createdTime));
+  } else if (sortValue === "date-desc") {
+    posts.sort((a, b) => new Date(b.createdTime) - new Date(a.createdTime));
   }
 
   renderBlogPosts(posts);
@@ -90,16 +110,17 @@ const sortBlogPosts = (sortValue) => {
 
 const getBlogPosts = async () => {
   try {
-    const response = await fetch(tableUrl, { headers: headers });
+    const response = await fetch(TABLE_URL, { headers: headers });
     if (response.ok) {
       const data = await response.json();
       blogPosts = data.records;
       filteredPosts = [...blogPosts];
       renderBlogPosts(blogPosts);
     } else {
-      console.log("Failed to fetch blog posts");
+      results.innerHTML = `We failed to fetch the blog post. Apologies...`;
     }
   } catch (err) {
+    results.innerHTML = `We are experiencing technical difficulties.`;
     console.log("An error occurred:", err);
   }
 };
@@ -120,11 +141,4 @@ searchInput.addEventListener("keyup", () => {
 sortSelect.addEventListener("change", (event) => {
   const sortValue = event.target.value;
   sortBlogPosts(sortValue);
-});
-
-results.addEventListener("click", (event) => {
-  if (event.target.id === "showAll") {
-    isShowingAll = true;
-    renderBlogPosts(blogPosts);
-  }
 });
