@@ -8,8 +8,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         contact: resolve(__dirname, "contact.html"),
-        blog: resolve(__dirname, "about.html"),
-        blogDetail: resolve(__dirname, "details.html"),
+        about: resolve(__dirname, "about.html"),
+        details: resolve(__dirname, "details.html"),
       },
     },
   },

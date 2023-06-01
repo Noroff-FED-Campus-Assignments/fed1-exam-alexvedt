@@ -31,7 +31,7 @@ let isShowingAll = false;
 
 const renderBlogPosts = (posts) => {
   results.innerHTML = "";
-  const maxPostsToShow = 10;
+  const maxPostsToShow = 10; // Maximum number of posts to show initially
 
   const visiblePosts = isShowingAll ? posts : posts.slice(0, maxPostsToShow);
 
