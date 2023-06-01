@@ -5,7 +5,6 @@ body {
   width: 100%;
   min-width: 320px;
   place-items: flex-start;
-  /* height: 100vh; */
   overflow: none;
   display: grid;
   grid-template-columns: auto;
