@@ -1,9 +1,4 @@
-/*!
- * Layout
- * Layout classes use the l- prefix to indicate they are layout classes.
- * @tutorial https://web.dev/learn/css/layout/
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-3/css-grids
- */
+
 
 body {
   margin: 0;
@@ -40,7 +35,6 @@ body {
 .l-footer {
   display: flex;
   flex-direction: column;
-  /* grid-area: footer; */
   width: 100%;
   padding: var(--size-fluid-1);
 }

@@ -1,49 +1,9 @@
-/*!
- * UI
- * Place all your regular CSS here. If you don't know where to write your css, write it here.
- * @tutorial https://web.dev/learn/css/flexbox/
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-3/media-queries
- */
-
-
-:where(p) {
-  max-inline-size: none; 
-}
-
-
-input {
-  outline-offset: 1px;
-}
-
-html a:visited {
-  text-decoration: none;
-  color: rgb(255, 255, 255);  
-}
-
-html a:hover{
-  color: white;
-  text-decoration: underline 1px solid white;
-}
-
- body
-{
-  font-family: Inconsolata, sans-serif;
-  font-weight: 300;
-  background-color: #1e1e1e;
-}
-
-
-/* header image */
 .headerimage{
   display: flex;
   justify-content: center;
   margin: 0 auto;
   max-width: 1400px;
 }
-
-
-/*  serch container */
-
 .search-container{
   display: flex;
   flex-direction: column;
@@ -51,7 +11,6 @@ html a:hover{
   align-items: center;
   border: 1px solid wheat;  
 }
-
 .search-fields{
   display: flex;
   flex-direction: row;
@@ -59,7 +18,6 @@ html a:hover{
   align-items: center;
   gap: 1rem;
 }
-
 .search-container :nth-child(1) {
   margin-right: 1rem;
 }
@@ -71,7 +29,6 @@ html a:hover{
   max-height: 400px;
   margin-bottom: 5vh;
 }
-
 .loading-container {
   display: flex;
   justify-content: center;
@@ -82,9 +39,9 @@ html a:hover{
 .header-text{
   font-family: Inconsolata, sans-serif; ;
   font-weight: 500;
-  background: #42275a;  /* fallback for old browsers */
+  background: #42275a;  /*   -webkit-background-clip: text;  is underlined but it has to be there for the text to be visible */
   background: linear-gradient(100deg, rgba(226,209,133,0.4248074229691877) 3%, rgba(162,162,162,1) 53%, rgba(226,209,133,0.4640231092436975) 100%);
-  -webkit-background-clip: text;
+  -webkit-background-clip: text;  
 -webkit-text-fill-color: transparent;
 
 
@@ -95,7 +52,6 @@ html a:hover{
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  /* flex-direction: row-reverse; */
   justify-content: center;
   align-items: center;
 }
@@ -122,7 +78,7 @@ html a:hover{
 
 
 .blog-box {
-  width: 350px;
+  width: 300px;
   background-color: #1e1e1e;
   border: 1px solid #d1d1d170;
   margin: 1.2rem;
@@ -154,7 +110,6 @@ html a:hover{
 
 
 
-/* Details */
 
 .details-box{
   height: 100%;
@@ -340,7 +295,6 @@ text-decoration: underline 1px solid white;
 
 
 
-/* image hover */
 
 
 @keyframes pulse {
@@ -376,7 +330,6 @@ text-decoration: underline 1px solid white;
 
 
 
-/* Carousel */
 
 .glide{
   display: flex;
@@ -418,42 +371,6 @@ text-decoration: underline 1px solid white;
 
 
 
-
-
-@media screen and (max-width: 768px) {
-  .blog-container{
-    flex-direction: row;
-  }
-  .blog-box {
-    width: 100%;
-    margin: 1.2rem 0rem;
-    flex-direction: row;
-  }
-  .hero-image{
-    display: none;
-  }
-  .card {
-    width: 100%;
-  }
-  .search-fields{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    max-width: 50%;
-  }
-  .search-container{
-    flex-direction: row;
-  }
-}
-
-
-
-
-
-
-
-
-/* loader */
 
 
 .lds-ellipsis {
@@ -512,5 +429,34 @@ text-decoration: underline 1px solid white;
     transform: translate(24px, 0);
   }
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .blog-container{
+    flex-direction: row;
+  }
+  .blog-box {
+    width: 100%;
+    margin: 1.2rem 0rem;
+    flex-direction: row;
+  }
+  .hero-image{
+    display: none;
+  }
+  .card {
+    width: 100%;
+  }
+  .search-fields{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 50%;
+  }
+  .search-container{
+    flex-direction: row;
+  }
+}
+
 
 

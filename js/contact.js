@@ -43,7 +43,6 @@ function validateName() {
   } else {
     nameEl.classList.remove("is-valid");
     nameEl.classList.add("is-invalid");
-    nameEl.classList.remove("valid-input");
     nameElIsValid = false;
 
     const invalidCharacter = nameEl.value.match(disallowedCharacters.name);
@@ -142,7 +141,11 @@ function updateButtonState() {
     !emailElIsValid ||
     !subjectElIsValid ||
     !addressElIsValid ||
-    messageEl.value.trim().length < 2
+    messageEl.value.trim().length < 2 ||
+    !nameEl.value.trim() ||
+    !emailEl.value.trim() ||
+    !subjectEl.value.trim() ||
+    !addressEl.value.trim()
   ) {
     buttonEl.disabled = true;
     buttonEl.textContent = "Fill out form";
@@ -178,3 +181,5 @@ formEl.addEventListener("submit", (event) => {
     submitForm();
   }
 });
+
+updateButtonState();

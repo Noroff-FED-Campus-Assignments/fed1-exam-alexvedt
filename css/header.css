@@ -1,13 +1,9 @@
-/* body{
-    position: relative;
-} */
 
 .logo{
     max-width: 200px;
     max-height: 200px;
 }
 header{
-/*     position: fixed; */
     top: 0;
     width: 100%;
     background-color: #1e1e1e;
@@ -74,6 +70,12 @@ a{
 }
     
 @media screen and (max-width: 768px) {
+    header{
+        position: fixed;
+        z-index: 900;
+
+
+    }
     .hamburger{
         display: block;
     }
@@ -102,7 +104,7 @@ a{
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        z-index: 1;
+        z-index: 10000;
     }
     .nav-item{
         margin: 16px 0;
@@ -111,4 +113,8 @@ a{
         left: 0;
         padding: 0;
     }
+    body{
+        margin-top: 2rem;
+    }
         }
+   

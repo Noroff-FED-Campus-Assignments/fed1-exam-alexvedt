@@ -38,7 +38,7 @@ const openImagePopup = (imageUrl) => {
 
   closeBtn.addEventListener("click", function () {
     popupContainer.remove();
-    document.body.style.overflow = "auto"; // Restore scrolling on the main page
+    document.body.style.overflow = "auto";
   });
 
   popupContainer.addEventListener("click", function (event) {
@@ -55,17 +55,19 @@ const renderBlogPost = (blogpost) => {
   const title = blogpost.fields.Title;
   const text = blogpost.fields.Text;
   const createdDate = new Date(blogpost.createdTime).toLocaleDateString();
-  const faviconUrl = blogpost.fields["Favicon"];
 
-  // Update favicon dynamically
+  const titleForFavicon = title;
+
+  document.title = title;
+
   const favicon = document.querySelector('link[rel="icon"]');
   if (favicon) {
-    favicon.href = faviconUrl;
+    favicon.href = titleForFavicon;
   } else {
     const newFavicon = document.createElement("link");
     newFavicon.rel = "icon";
     newFavicon.type = "image/png";
-    newFavicon.href = faviconUrl;
+    newFavicon.href = titleForFavicon;
     document.head.appendChild(newFavicon);
   }
 
@@ -86,7 +88,7 @@ const renderBlogPost = (blogpost) => {
   const thumbnailImage = blogPostContainer.querySelector(".thumbnail-image");
   thumbnailImage.addEventListener("click", function () {
     openImagePopup(imageUrl);
-    document.body.style.overflow = "hidden"; // Prevent scrolling on the main page
+    document.body.style.overflow = "hidden";
   });
 };
 
