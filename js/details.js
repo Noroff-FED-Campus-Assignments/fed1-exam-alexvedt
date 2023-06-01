@@ -76,7 +76,7 @@ const renderBlogPost = (blogpost) => {
             <img src="${imageUrl}" alt="Illustration of ${title}" class="thumbnail-image">
         </div>
     </div>
-        <div class="details-text animate__animated animate__slideInUp">
+        <div class="details-text animate__animated animate__slideInDown">
             <span class="details-span">${createdDate} / By Alex</span>
             <p class="p-details">${text}</p>
 
@@ -99,10 +99,10 @@ const getBlogPost = async () => {
 
       renderBlogPost(blogpost);
     } else {
-      blogPostContainer.innerHTML = `We failed to fetch the blog post. Apologies... Reach out to us in the contact section`;
+      blogPostContainer.innerHTML = `We failed to fetch the blog post. Apologies...`;
     }
   } catch (err) {
-    blogPostContainer.innerHTML = `We are experiencing technical difficulties. Reach out to us in the contact section`;
+    blogPostContainer.innerHTML = `We are experiencing technical difficulties.`;
     console.log("An error occurred:", err);
   }
 };
