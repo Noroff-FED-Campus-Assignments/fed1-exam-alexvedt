@@ -78,7 +78,7 @@ const renderBlogPost = (blogpost) => {
             <img src="${imageUrl}" alt="Illustration of ${title}" class="thumbnail-image">
         </div>
     </div>
-        <div class="details-text animate__animated animate__slideInDown">
+        <div class="details-text animate__animated animate__slideInUp">
             <span class="details-span">${createdDate} / By Alex</span>
             <p class="p-details">${text}</p>
 
