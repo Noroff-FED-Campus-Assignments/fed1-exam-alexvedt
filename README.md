@@ -12,12 +12,11 @@ This project was bootstrapped with Vite.
 ## Resources
 
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
-- [Design](https://www.figma.com/file/RTM4cmMfjjTz1T5U6nK9b0/Untitled?type=design&node-id=0%3A1&t=Rs9nrc7Ip5t4U1qc-1)
+- [Design](https://www.figma.com/file/RTM4cmMfjjTz1T5U6nK9b0/Exam---Alexander-Bjerketvedt-2023?type=design&node-id=0%3A1&t=HPPGU7jeRqotbnTv-1)
 - [Production deploy](https://codebuzz.netlify.app/)
 - [Deployment CI](https://app.netlify.com/sites/codebuzz/overview)
 - [API Docs](https://airtable.com/developers/web/api/introduction)
 - [API Endpoint](https://api.airtable.com/v0/app3aw9WCV8zgt57M/tbl2EUogT08k40AN8)
-  )
 
 ## Deployment
 
