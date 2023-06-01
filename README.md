@@ -12,11 +12,12 @@ This project was bootstrapped with Vite.
 ## Resources
 
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
-- [Design](_LINK_TO_FIGMA_)
+- [Design](https://www.figma.com/file/RTM4cmMfjjTz1T5U6nK9b0/Untitled?type=design&node-id=0%3A1&t=Rs9nrc7Ip5t4U1qc-1)
 - [Production deploy](https://codebuzz.netlify.app/)
-- [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
+- [Deployment CI](https://app.netlify.com/sites/codebuzz/overview)
 - [API Docs](https://airtable.com/developers/web/api/introduction)
 - [API Endpoint](https://api.airtable.com/v0/app3aw9WCV8zgt57M/tbl2EUogT08k40AN8)
+- [Report] (https://docs.google.com/document/d/1YB4l8uM5cz6ISp0hwG-4P4bzcQErkQE3fP7w7J6PCTY/edit?usp=sharing)
   )
 
 ## Deployment
@@ -66,7 +67,7 @@ All of these todo's must be done to pass the asssignment.
 - [x] End-user can filter the list.
 - [x] End-user can sort list by;
   - [x] Name ascending order
-  - [ ] Name descending order
+  - [x] Name descending order
 - [x] Confirmation modal after custumer submits a successful contact form.
 - [x] End-user can auto-fill the contact form using the browser auto-fill.
 - [x] End-user can auto-fill the contact form using a password manager.
@@ -76,7 +77,7 @@ All of these todo's must be done to pass the asssignment.
 - [ ] End-user needs to prove there are human using a captcha feature on the contact form.
   - [x] Each item in the list has a staggered animation.
   - [x] Contact form success modal fades in.
-- [ ] End-user can view a custom favicon.
+- [x] End-user can view a custom favicon.
 - [x] CSS uses variables
 - [x] Code is dry - There are no repeating functions, variables.
 - [x] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
