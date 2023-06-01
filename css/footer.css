@@ -9,11 +9,11 @@
     align-items: center;
 }
 
-:root {  
-    --green: rgb(42, 252, 152);
-    --blue: rgb(41, 121, 255);
-  }
-  
+
+  /* Code under is inspired by 
+  Author: Hyperplexed 
+  Source: https://www.youtube.com/watch?v=owpaafxvkjU&t=1s
+  */
   @keyframes float {
     from, to {
       transform: translateY(-0%);

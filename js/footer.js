@@ -1,3 +1,8 @@
+/* Code under is inspired by 
+  Author: Hyperplexed 
+  Source: https://www.youtube.com/watch?v=owpaafxvkjU&t=1s
+  */
+
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const enhance = (id) => {
